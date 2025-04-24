@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CodeCorrida.Domain\CodeCorrida.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="DI\" />
+      <Folder Include="Extensions\" />
+      <Folder Include="Infrastructure\Extensions\" />
+      <Folder Include="Services\Implementations\" />
+      <Folder Include="Services\Interfaces\" />
+      <Folder Include="UseCases\CommandHandlers\MyTestEntities\" />
+      <Folder Include="UseCases\QueryHandlers\MyTestEntities\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Mapster" Version="7.4.0" />
+      <PackageReference Include="Mediator.Abstractions" Version="2.1.7" />
+    </ItemGroup>
+
+</Project>

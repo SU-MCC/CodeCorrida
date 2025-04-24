@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>CodeCorrida.Infrastructure.Mapster</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="MapperHelpers\" />
+      <Folder Include="MappingRules\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Mapster" Version="7.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CodeCorrida.Application\CodeCorrida.Application.csproj" />
+      <ProjectReference Include="..\CodeCorrida.Contracts.Mapper\CodeCorrida.Contracts.Mapper.csproj" />
+      <ProjectReference Include="..\CodeCorrida.Domain\CodeCorrida.Domain.csproj" />
+    </ItemGroup>
+
+</Project>
