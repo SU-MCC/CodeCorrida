@@ -17,7 +17,7 @@ builder.Services.AddClientCors(builder.Configuration);
 builder.Services.AddDataAccessDependencies(builder.Configuration, builder.Environment);
 MapsterConfig.RegisterMappingConfig();
 
-builder.Services.ConfigureSwagger();
+//builder.Services.ConfigureSwagger();
 builder.Services.AddControllers();
                 //.AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
@@ -25,7 +25,7 @@ builder.Services.ConfigureMediator();
 
 builder.ConfigureLogger();
 builder.ConfigureKestrel();
-
+builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 app.UseMiddleware<LoggerMiddleware>();
@@ -57,6 +57,12 @@ if (!app.Environment.IsProduction())
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
         options.DocExpansion(DocExpansion.None);
     });
+}
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.ConfigureRequestLocalization();

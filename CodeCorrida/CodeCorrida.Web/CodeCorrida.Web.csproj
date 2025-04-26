@@ -12,6 +12,10 @@
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.15">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Serilog" Version="3.1.1" />
         <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
         <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
@@ -21,12 +25,11 @@
     <ItemGroup>
       <ProjectReference Include="..\CodeCorrida.Application\CodeCorrida.Application.csproj" />
       <ProjectReference Include="..\CodeCorrida.Domain\CodeCorrida.Domain.csproj" />
-      <ProjectReference Include="..\CodeCorrida.Infrastructure.DataAccess \CodeCorrida.Infrastructure.DataAccess.csproj" />
-      <ProjectReference Include="..\CodeCorrida.Infrastructure.Mapster \CodeCorrida.Infrastructure.Mapster.csproj" />
+      <ProjectReference Include="..\CodeCorrida.Infrastructure.DataAccess\CodeCorrida.Infrastructure.DataAccess.csproj" />
+      <ProjectReference Include="..\CodeCorrida.Infrastructure.Mapster\CodeCorrida.Infrastructure.Mapster.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
       <Folder Include="Filters\" />
       <Folder Include="Helpers\" />
     </ItemGroup>

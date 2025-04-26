@@ -1,4 +1,5 @@
 using CodeCorrida.Domain.RequestFeatures;
+using Mapster;
 
 namespace CodeCorrida.Application.DTOs.Common;
 
@@ -19,12 +20,11 @@ public class PagedListDto<T> : List<T>
         AddRange(items);
     }
     
-    /*
+    
     public static PagedListDto<T> ToPagedListDto<Y>(PagedList<Y> original)
     {
         var result = original.Adapt<IEnumerable<T>>();
         return new PagedListDto<T>(result, original.MetaData.TotalCount, original.MetaData.CurrentPage, original.MetaData.PageSize);
     }
-    */
 }
 

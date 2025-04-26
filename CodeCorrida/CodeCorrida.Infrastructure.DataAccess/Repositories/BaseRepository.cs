@@ -10,8 +10,8 @@ namespace CodeCorrida.Infrastructure.DataAccess.Repositories;
 
 public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class, IBaseEntity
 {
-    private readonly BaseDbContext _dbContext;
-    private readonly IMapper _mapper;
+    protected readonly BaseDbContext _dbContext;
+    protected readonly IMapper _mapper;
 
     protected BaseRepository(BaseDbContext dbContext, IMapper mapper)
     {

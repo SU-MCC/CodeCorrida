@@ -1,5 +1,7 @@
 using CodeCorrida.Contracts.DataAccess.Interfaces;
 using CodeCorrida.Infrastructure.DataAccess.Contexts;
+using CodeCorrida.Infrastructure.DataAccess.Helpers;
+using CodeCorrida.Infrastructure.DataAccess.Interfaces;
 using CodeCorrida.Infrastructure.DataAccess.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +23,8 @@ public static class Registration
         serviceCollection.Configure<DataProtectionTokenProviderOptions>(opt =>
             opt.TokenLifespan = TimeSpan.FromHours(2));
 
-        serviceCollection.AddScoped<IMyTestEntityRepository, MyTestEntityRepository>();
+        serviceCollection.AddScoped<IBaseDbContextSeed, BaseDbContextSeed>()
+            .AddScoped<IMyTestEntityRepository, MyTestEntityRepository>();
         
         return serviceCollection;
     }

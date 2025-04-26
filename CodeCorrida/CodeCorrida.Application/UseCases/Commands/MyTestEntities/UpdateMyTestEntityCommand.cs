@@ -4,5 +4,5 @@ using Mediator;
 
 namespace CodeCorrida.Application.UseCases.Commands.MyTestEntities;
 
-public sealed record UpdateMyTestEntityCommand(UpdateMyTestEntityRequestDto createDto) 
+public sealed record UpdateMyTestEntityCommand(UpdateMyTestEntityRequestDto updateDto) 
     : ICommand<UpdateMyTestEntityResponseDto>;

@@ -12,7 +12,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CodeCorrida.Contracts.DataAccess \CodeCorrida.Contracts.DataAccess.csproj" />
+      <ProjectReference Include="..\CodeCorrida.Application\CodeCorrida.Application.csproj" />
+      <ProjectReference Include="..\CodeCorrida.Contracts.DataAccess\CodeCorrida.Contracts.DataAccess.csproj" />
       <ProjectReference Include="..\CodeCorrida.Contracts.Mapper\CodeCorrida.Contracts.Mapper.csproj" />
       <ProjectReference Include="..\CodeCorrida.Domain\CodeCorrida.Domain.csproj" />
     </ItemGroup>

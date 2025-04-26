@@ -1,4 +1,4 @@
-name: "education-system"
+name: "code-corrida"
 
 services:
   postgres:
