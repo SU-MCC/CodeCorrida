@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Mediator.SourceGenerator" Version="2.1.7">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.15">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Serilog" Version="3.1.1" />
+        <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+        <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Modsen.CodeCorrida.Web.Application\Modsen.CodeCorrida.Web.Application.csproj" />
+      <ProjectReference Include="..\Modsen.CodeCorrida.Web.Domain\Modsen.CodeCorrida.Web.Domain.csproj" />
+      <ProjectReference Include="..\Modsen.CodeCorrida.Web.Infrastructure.DataAccess\Modsen.CodeCorrida.Web.Infrastructure.DataAccess.csproj" />
+      <ProjectReference Include="..\Modsen.CodeCorrida.Web.Infrastructure.Mapster\Modsen.CodeCorrida.Web.Infrastructure.Mapster.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Filters\" />
+      <Folder Include="Helpers\" />
+    </ItemGroup>
+
+</Project>
